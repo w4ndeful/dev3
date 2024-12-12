@@ -1,6 +1,6 @@
-# app/users/views.py
-from flask import render_template, request, redirect, url_for
-from . import users_bp
+from flask import Blueprint, render_template, request, redirect, url_for
+
+users_bp = Blueprint('users', __name__, template_folder='templates/users')
 
 @users_bp.route('/hi/<name>')
 def greetings(name):
